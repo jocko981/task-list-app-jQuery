@@ -128,7 +128,7 @@ $(".start-done-popup.start-task .btn.no").click(function () {
   $(".start-done-popup.start-task").removeClass("is-visible")
 })
 $(".start-done-popup.start-task").click(function (e) {
-  if (!$(e.target).is($(".popup-container")) && !$(e.target).is($(".popup-container .alert-text"))) {
+  if (!$(e.target).is($(".popup-container")) && !$(e.target).is($(".popup-container .alert-text")) && !$(e.target).is($(".start-done-popup.start-task .btn.yes"))) {
     $(".start-done-popup.start-task").removeClass("is-visible")
   }
 })
@@ -144,7 +144,7 @@ $(".start-done-popup.done-task .btn.no").click(function () {
   $(".start-done-popup.done-task").removeClass("is-visible")
 })
 $(".start-done-popup.done-task").click(function (e) {
-  if (!$(e.target).is($(".popup-container")) && !$(e.target).is($(".popup-container .alert-text"))) {
+  if (!$(e.target).is($(".popup-container")) && !$(e.target).is($(".popup-container .alert-text")) && !$(e.target).is($(".start-done-popup.done-task .btn.yes"))) {
     $(".start-done-popup.done-task").removeClass("is-visible")
   }
 })
