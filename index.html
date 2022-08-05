@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WSCprinter is a online service platform that helps you getting detailed view of tasks along with making it easy to keep track of them for easier management."
+    />
+
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/skin.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script defer src="js/main.js"></script>
+
+    <title>wsc-printer</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="logo"
+        src="images/logo_wscprinter.png"
+        alt="wsc printer logo"
+      />
+      <div class="user-container">
+        <div class="user">
+          <img class="user-icon" src="images/user-image.png" alt="user icon" />
+          <span class="user-name">John Doe</span>
+        </div>
+        <button class="log-btn btn-logout">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="issues-selection">
+        <div class="selection to-do active">
+          <p class="text">To do</p>
+          <p class="numeric">34</p>
+        </div>
+        <div class="selection in-progress">
+          <p class="text">In progress</p>
+          <p class="numeric">12</p>
+        </div>
+        <div class="selection done">
+          <p class="text">Done</p>
+          <p class="numeric">214</p>
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <div>
+          <label for="select-due-date">Due date</label>
+          <select name="select-due-date" required id="select-due-date">
+            <option value="today">Today</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="7-days">7 days</option>
+            <option value="30-days">30 days</option>
+          </select>
+        </div>
+        <div>
+          <label for="order-number">Order name</label>
+          <input type="text" name="" id="order-number" />
+        </div>
+        <div>
+          <label for="job-number">Job number</label>
+          <input type="number" name="" id="job-number" />
+        </div>
+        <div>
+          <label for="job-name">Job name</label>
+          <input type="text" name="" id="job-name" />
+        </div>
+      </div>
+
+      <div class="issues-main-container">
+        <div class="issues-table"></div>
+
+        <div class="issues-detail-container">
+          <nav>
+            <ul class="issues-detail-nav-list">
+              <li class="nav-item info active">Info</li>
+              <li class="nav-item linked-tasks">Linked tasks</li>
+              <li class="nav-item files">Files</li>
+              <li class="nav-item noted">Notes</li>
+            </ul>
+          </nav>
+
+          <div class="issue-content">
+            <div class="issue-item">
+              <div>
+                <p class="heading">Job info</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Perferendis perspiciatis aspernatur beatae, architecto ipsum
+                  non velit pariatur quisquam delectus repudiandae iusto rerum
+                  dolorem odit eum aut labore, nisi a?
+                </p>
+              </div>
+              <img src="images/chair-photo-min.jpg" alt="brown leather chair" />
+            </div>
+            <div class="issue-item">
+              <div>
+                <p class="heading">Job info</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Perferendis perspiciatis aspernatur beatae, architecto ipsum
+                  non velit pariatur quisquam delectus repudiandae iusto rerum
+                  dolorem odit eum aut labore, nisi a?
+                </p>
+              </div>
+              <img src="images/chair-photo-min.jpg" alt="brown leather chair" />
+            </div>
+            <div class="issue-item">
+              <div>
+                <p class="heading">Job info</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Perferendis perspiciatis aspernatur beatae, architecto ipsum
+                  non velit pariatur quisquam delectus repudiandae iusto rerum
+                  dolorem odit eum aut labore, nisi a?
+                </p>
+              </div>
+              <img src="images/chair-photo-min.jpg" alt="brown leather chair" />
+            </div>
+
+            <div class="issue-item">
+              <div class="customer">
+                <p class="heading">Customer</p>
+                <adress class="contact">
+                  <p class="description">Dynamicsoft Doo</p>
+                  <p class="description">
+                    Street Vase Stajica 6, 21101 Novi Sad
+                  </p>
+                  <p class="description">email: info@dynamicsoft.it</p>
+                  <p class="description">Tel: ++381 (0)64 6421 258</p>
+                </adress>
+              </div>
+              <div class="delivery">
+                <p class="heading">Delivery info</p>
+                <adress class="contact">
+                  <p class="description">Dynamicsoft Srl</p>
+                  <p class="description">Via S.Pescatori 117, 83100 Avellino</p>
+                  <p class="description">Tel: +39 0825 45.81.85</p>
+                </adress>
+              </div>
+            </div>
+          </div>
+
+          <div class="start-done-container">
+            <button class="btn-start">Start</button>
+            <button class="btn-done">Done</button>
+            <!-- start popup -->
+            <div class="start-done-popup start-task" role="alert">
+              <div class="popup-container">
+                <p class="alert-text">Are you sure you want to Start?</p>
+                <ul class="buttons">
+                  <li class="btn yes">YES</li>
+                  <li class="btn no">NO</li>
+                </ul>
+              </div>
+            </div>
+            <!-- done popup -->
+            <div class="start-done-popup done-task" role="alert">
+              <div class="popup-container">
+                <p class="alert-text">Are you sure this is Done?</p>
+                <ul class="buttons">
+                  <li class="btn yes">YES</li>
+                  <li class="btn no">NO</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
